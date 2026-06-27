@@ -1,0 +1,38 @@
+* 
+{
+    box-sizing:border-box;
+    font-family: "Pixelify Sans", "Elms Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 4px;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    
+}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+header, body 
+{
+    background-color: #4169E1;
+}
+
+section
+{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 2rem;
+}
+
+.hidden {
+    display: none;
+}

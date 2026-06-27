@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <link href="./css/introduction_me.css" rel="stylesheet">
+    <link href="./css/projects.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>matheus | portifólio</title>
+</head>
+<body>
+    <header class="header">
+        <div class="content_name">
+            <p>matheus</p>
+            <div class="text-rotate">
+                <span>.dev</span>
+                <span>.rieper</span>
+            </div>
+        </div>
+
+        <div class="action">
+            <button type="button" onclick="aboutMe()">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="introduction-me">
+            <img src="./img/profile_matheus.jpeg" alt="">
+            <div>
+                <p>
+                    Olá! sou o Matheus, desenvolvedor full-stack. 
+                </p>
+    
+                <p>
+                    Busco sempre aprender sobre arquitetura, e como melhor escrever fluxo de código. Acredito que um bom software combina código limpo e uma boa experiência para quem utiliza.
+                </p>
+            </div>
+    </section>
+
+
+    <section class="projects">
+        <div class="project-card">
+            <img src="./img/aguias_dashboard.jpeg" alt="Projeto">
+        
+            <div class="project-overlay">
+                <h3>Projeto Águias do Sul</h3>
+        
+                <p>
+                    Sistema web para gerenciamento de clubes de Desbravadores,
+com controle de membros, unidades, eventos e pontuações.
+                </p>
+        
+                <div class="techs">
+                    <img src="./img/docker_icon.png" alt="">
+                    <img src="./img/laravel_icon.png" alt="">
+                    <img src="./img/postgresql_icon.png" alt="">
+                    <img src="./img/livewire_icon.png" alt="">
+                    <img src="./img/nginx_icon.png" alt="">
+
+                </div>
+        
+                <div class="buttons">
+                    <a href="https://github.com/MatheusRieperdeOliveira/aguias_do_sul" target="_blank">GitHub
+                        <img src="./img/github_icon.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>

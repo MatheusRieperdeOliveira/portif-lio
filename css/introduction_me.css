@@ -1,0 +1,52 @@
+.introduction-me img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.introduction-me div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.introduction-me p {
+    color: #fff;
+    font-family: "Elms Sans";
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .introduction-me {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 1.5rem;
+    }
+
+    .introduction-me img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .introduction-me div {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .introduction-me {
+        padding: 40px 1rem;
+    }
+
+    .introduction-me img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .introduction-me p {
+        font-size: .95rem;
+    }
+}
