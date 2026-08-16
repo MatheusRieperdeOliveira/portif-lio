@@ -1,38 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4169E1">
+    <meta name="description" content="Portfólio de Matheus Rieper, desenvolvedor full-stack. Projetos em Go, Vue, Laravel, React e mais.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="./img/favicon-64.png">
+    <link rel="apple-touch-icon" href="./img/apple-touch-icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/index.css" rel="stylesheet">
     <link href="./css/introduction_me.css" rel="stylesheet">
     <link href="./css/projects.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     <title>matheus | portifólio</title>
 </head>
-<body>
+<body id="top">
     <header class="header">
-        <div class="content_name">
+        <a class="content_name" href="#top">
             <p>matheus</p>
             <div class="text-rotate">
                 <span>.dev</span>
                 <span>.rieper</span>
             </div>
-        </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="https://github.com/MatheusRieperdeOliveira" target="_blank" rel="noopener">GitHub</a>
+        </nav>
 
         <div class="action">
-            <button type="button" onclick="aboutMe()">
+            <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-drawer">
                 <i data-lucide="menu"></i>
             </button>
         </div>
     </header>
 
-    <section class="introduction-me">
-            <img src="./img/profile_matheus.jpeg" alt="">
+    <div class="drawer-backdrop" hidden></div>
+
+    <aside id="mobile-drawer" class="drawer" aria-hidden="true">
+        <button type="button" class="drawer-close" aria-label="Fechar menu">
+            <i data-lucide="x"></i>
+        </button>
+        <nav class="drawer-links">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="https://github.com/MatheusRieperdeOliveira" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </aside>
+
+    <section id="sobre" class="introduction-me">
+            <img src="./img/profile_matheus.jpeg" alt="Foto de Matheus Rieper" width="280" height="280">
             <div>
                 <p>
                     Olá! sou o Matheus, desenvolvedor full-stack. 
@@ -45,11 +67,11 @@
     </section>
 
 
-    <section class="projects">
+    <section id="projetos" class="projects">
         <h2 class="projects-title">Projetos</h2>
 
         <div class="project-card">
-            <img src="./img/aguias_dashboard.jpeg" alt="Projeto">
+            <img src="./img/aguias_dashboard.jpeg" alt="Projeto Águias do Sul" width="1000" height="625" loading="lazy" decoding="async">
         
             <div class="project-overlay">
                 <h3>Projeto Águias do Sul</h3>
@@ -77,7 +99,7 @@ com controle de membros, unidades, eventos e pontuações.
         </div>
 
         <div class="project-card">
-            <img src="./img/rieperfind_screenshot.png" alt="Projeto rieperfind">
+            <img src="./img/rieperfind_screenshot.jpg" alt="Projeto rieperfind" width="1000" height="625" loading="lazy" decoding="async">
 
             <div class="project-overlay">
                 <h3>rieperfind</h3>
@@ -108,7 +130,7 @@ e monta um whois do usuário, com tema claro/escuro e exportação em imagem.
         </div>
 
         <div class="project-card">
-            <img src="./img/riephub_cover.png" alt="Projeto riephub">
+            <img src="./img/riephub_cover.jpg" alt="Projeto riephub" width="1000" height="625" loading="lazy" decoding="async">
 
             <div class="project-overlay">
                 <h3>riephub</h3>
@@ -135,7 +157,7 @@ envio de mensagens, webhooks e painel admin em Vue.
         </div>
 
         <div class="project-card">
-            <img src="./img/book_wise_cover.png" alt="Projeto Book Wise">
+            <img src="./img/book_wise_cover.jpg" alt="Projeto Book Wise" width="1000" height="625" loading="lazy" decoding="async">
 
             <div class="project-overlay">
                 <h3>Book Wise</h3>
@@ -160,7 +182,7 @@ com autenticação e PostgreSQL.
         </div>
 
         <div class="project-card">
-            <img src="./img/star_wars_api_cover.png" alt="Projeto Star Wars API">
+            <img src="./img/star_wars_api_cover.jpg" alt="Projeto Star Wars API" width="1000" height="625" loading="lazy" decoding="async">
 
             <div class="project-overlay">
                 <h3>Star Wars API</h3>
@@ -185,7 +207,7 @@ planetas, naves e filmes, dockerizada com PostgreSQL.
         </div>
 
         <div class="project-card">
-            <img src="./img/airport_cover.png" alt="Projeto Airport Manager">
+            <img src="./img/airport_cover.jpg" alt="Projeto Airport Manager" width="1000" height="625" loading="lazy" decoding="async">
 
             <div class="project-overlay">
                 <h3>Airport Manager</h3>
@@ -211,7 +233,7 @@ aviões e interface em Vuetify.
         </div>
 
         <div class="project-card">
-            <img src="./img/gosheetsgo_cover.png" alt="Projeto GoSheetsGo">
+            <img src="./img/gosheetsgo_cover.jpg" alt="Projeto GoSheetsGo" width="1000" height="625" loading="lazy" decoding="async">
 
             <div class="project-overlay">
                 <h3>GoSheetsGo</h3>
@@ -235,6 +257,6 @@ e enviar direto para o Google Sheets.
         </div>
     </section>
 
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </body>
 </html>

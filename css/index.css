@@ -3,23 +3,29 @@
     box-sizing:border-box;
     font-family: "Pixelify Sans", "Elms Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 4px;
     font-style: normal;
     margin: 0;
     padding: 0;
     border: none;
-
-    
 }
 
 html 
 {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 header, body 
 {
     background-color: #4169E1;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 section
@@ -31,8 +37,16 @@ section
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 2rem;
+    scroll-margin-top: 72px;
 }
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 768px) {
+    section {
+        min-height: auto;
+        padding: 84px 1.25rem 48px;
+    }
 }

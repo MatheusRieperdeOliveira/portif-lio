@@ -66,19 +66,21 @@
     transition: .35s;
 }
 
-.project-card:hover img{
-    transform: scale(1.08);
-}
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+    .project-card:hover img{
+        transform: scale(1.08);
+    }
 
-.project-card:hover .project-overlay{
-    opacity: 1;
-}
+    .project-card:hover .project-overlay{
+        opacity: 1;
+    }
 
-.project-card:hover h3,
-.project-card:hover p,
-.project-card:hover .techs,
-.project-card:hover .buttons{
-    transform: translateY(0);
+    .project-card:hover h3,
+    .project-card:hover p,
+    .project-card:hover .techs,
+    .project-card:hover .buttons{
+        transform: translateY(0);
+    }
 }
 
 .techs
@@ -145,4 +147,70 @@
     background: rgba(255,255,255,.08);
     border: 1px solid rgba(255,255,255,.08);
     transition: .25s;
+}
+
+/* mobile / touch: stacked card with always-visible info */
+@media (max-width: 768px), (hover: none) {
+    .projects {
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        cursor: default;
+        background: #111928;
+    }
+
+    .project-card > img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .project-overlay {
+        position: static;
+        inset: auto;
+        opacity: 1;
+        padding: 1.25rem;
+        gap: 0.85rem;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .project-overlay h3,
+    .project-overlay p,
+    .project-overlay .techs,
+    .project-overlay .buttons {
+        transform: none;
+    }
+
+    .project-overlay h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-overlay p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .techs {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .techs img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .project-overlay .buttons {
+        flex-wrap: wrap;
+        padding: 4px 0 0;
+        gap: 12px;
+    }
+
+    .project-overlay .buttons a {
+        min-height: 44px;
+        padding: 10px 16px;
+    }
 }
