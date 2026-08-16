@@ -15,33 +15,35 @@ function updateControls() {
     }
 }
 
-container.addEventListener("mouseenter", () => {
-    video.classList.add("brightness");
-    updateControls();
-});
+if (container && video && playBtn && pauseBtn) {
+    container.addEventListener("mouseenter", () => {
+        video.classList.add("brightness");
+        updateControls();
+    });
 
-container.addEventListener("mouseleave", () => {
-    video.classList.remove("brightness");
-    playBtn.classList.add("hidden");
-    pauseBtn.classList.add("hidden");
-});
+    container.addEventListener("mouseleave", () => {
+        video.classList.remove("brightness");
+        playBtn.classList.add("hidden");
+        pauseBtn.classList.add("hidden");
+    });
 
-playBtn.addEventListener("click", () => {
-    video.play();
-});
+    playBtn.addEventListener("click", () => {
+        video.play();
+    });
 
-pauseBtn.addEventListener("click", () => {
-    video.pause();
-});
+    pauseBtn.addEventListener("click", () => {
+        video.pause();
+    });
 
-video.addEventListener("play", () => {
-    video.classList.remove("brightness");
-    updateControls();
-});
+    video.addEventListener("play", () => {
+        video.classList.remove("brightness");
+        updateControls();
+    });
 
-video.addEventListener("pause", () => {
-    video.classList.remove("brightness");
-    updateControls();
-});
+    video.addEventListener("pause", () => {
+        video.classList.remove("brightness");
+        updateControls();
+    });
+}
 
 lucide.createIcons();

@@ -1,0 +1,8 @@
+.git
+.gitignore
+*.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+nginx.conf
+aguias_tour.mp4

@@ -1,0 +1,22 @@
+services:
+  app:
+    image: portifolio:latest
+    build: .
+    networks:
+      - RieperNet
+    deploy:
+      replicas: 1
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=RieperNet
+        - traefik.http.routers.portifolio.rule=Host(`portifolio.rieper.tech`)
+        - traefik.http.routers.portifolio.entrypoints=websecure
+        - traefik.http.routers.portifolio.tls.certresolver=letsencryptresolver
+        - traefik.http.routers.portifolio.service=portifolio
+        - traefik.http.services.portifolio.loadbalancer.server.port=80
+        - traefik.http.services.portifolio.loadbalancer.passHostHeader=true
+
+networks:
+  RieperNet:
+    external: true
+    name: RieperNet

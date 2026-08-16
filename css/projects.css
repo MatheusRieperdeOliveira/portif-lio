@@ -1,3 +1,18 @@
+.projects{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.projects-title{
+    width: 100%;
+    font-family: "Pixelify Sans", "Elms Sans", sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #fff;
+    text-align: center;
+    margin: 0 0 1.5rem;
+}
+
 .project-card{
     position: relative;
     overflow: hidden;
@@ -12,6 +27,11 @@
     display: block;
     width: 100%;
     transition: .4s;
+}
+
+.project-card > img{
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
 }
 .project-overlay p, 
 .project-overlay h3 
@@ -105,6 +125,14 @@
     background-color: blueviolet;
     border-radius: 8px;
     padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.project-overlay .buttons svg
+{
+    width: 15px;
+    height: 15px;
 }
 
 .project-overlay .buttons img
