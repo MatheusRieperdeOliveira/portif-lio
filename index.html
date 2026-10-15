@@ -1,262 +1,537 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#4169E1">
-    <meta name="description" content="Portfólio de Matheus Rieper, desenvolvedor full-stack. Projetos em Go, Vue, Laravel, React e mais.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/png" sizes="64x64" href="./img/favicon-64.png">
-    <link rel="apple-touch-icon" href="./img/apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <link href="./css/header.css" rel="stylesheet">
-    <link href="./css/index.css" rel="stylesheet">
-    <link href="./css/introduction_me.css" rel="stylesheet">
-    <link href="./css/projects.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest" defer></script>
-    <title>matheus | portifólio</title>
-</head>
-<body id="top">
-    <header class="header">
-        <a class="content_name" href="#top">
-            <p>matheus</p>
-            <div class="text-rotate">
-                <span>.dev</span>
-                <span>.rieper</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#4169E1" />
+        <meta
+            name="description"
+            content="Portfólio de Matheus Rieper, desenvolvedor full-stack. Projetos em Go, Vue, Laravel, React e mais."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="64x64"
+            href="./img/favicon-64.png"
+        />
+        <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap"
+            rel="stylesheet"
+        />
+        <link href="./css/header.css" rel="stylesheet" />
+        <link href="./css/index.css" rel="stylesheet" />
+        <link href="./css/introduction_me.css" rel="stylesheet" />
+        <link href="./css/projects.css" rel="stylesheet" />
+        <link href="./css/contact.css" rel="stylesheet" />
+        <script src="https://unpkg.com/lucide@latest" defer></script>
+        <title>matheus | portifólio</title>
+    </head>
+    <body id="top">
+        <header class="header">
+            <a class="content_name" href="#top">
+                <p>matheus</p>
+                <div class="text-rotate">
+                    <span>.dev</span>
+                    <span>.rieper</span>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contact">Contato</a>
+                <a
+                    href="https://github.com/MatheusRieperdeOliveira"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                >
+            </nav>
+
+            <div class="action">
+                <button
+                    type="button"
+                    class="menu-toggle"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-drawer"
+                >
+                    <i data-lucide="menu"></i>
+                </button>
             </div>
-        </a>
+        </header>
 
-        <nav class="nav-links">
-            <a href="#sobre">Sobre</a>
-            <a href="#projetos">Projetos</a>
-            <a href="https://github.com/MatheusRieperdeOliveira" target="_blank" rel="noopener">GitHub</a>
-        </nav>
+        <div class="drawer-backdrop" hidden></div>
 
-        <div class="action">
-            <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-drawer">
-                <i data-lucide="menu"></i>
+        <aside id="mobile-drawer" class="drawer" aria-hidden="true">
+            <button type="button" class="drawer-close" aria-label="Fechar menu">
+                <i data-lucide="x"></i>
             </button>
-        </div>
-    </header>
+            <nav class="drawer-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contact">Contato</a>
+                <a
+                    href="https://github.com/MatheusRieperdeOliveira"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                >
+            </nav>
+        </aside>
 
-    <div class="drawer-backdrop" hidden></div>
-
-    <aside id="mobile-drawer" class="drawer" aria-hidden="true">
-        <button type="button" class="drawer-close" aria-label="Fechar menu">
-            <i data-lucide="x"></i>
-        </button>
-        <nav class="drawer-links">
-            <a href="#sobre">Sobre</a>
-            <a href="#projetos">Projetos</a>
-            <a href="https://github.com/MatheusRieperdeOliveira" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-    </aside>
-
-    <section id="sobre" class="introduction-me">
-            <img src="./img/profile_matheus.jpeg" alt="Foto de Matheus Rieper" width="280" height="280">
+        <section id="sobre" class="introduction-me">
+            <img
+                src="./img/profile_matheus.jpeg"
+                alt="Foto de Matheus Rieper"
+                width="280"
+                height="280"
+            />
             <div>
+                <p>Olá! sou o Matheus, desenvolvedor full-stack.</p>
+
                 <p>
-                    Olá! sou o Matheus, desenvolvedor full-stack. 
-                </p>
-    
-                <p>
-                    Busco sempre aprender sobre arquitetura, e como melhor escrever fluxo de código. Acredito que um bom software combina código limpo e uma boa experiência para quem utiliza.
+                    Busco sempre aprender sobre arquitetura, e como melhor
+                    escrever fluxo de código. Acredito que um bom software
+                    combina código limpo e uma boa experiência para quem
+                    utiliza.
                 </p>
             </div>
-    </section>
+        </section>
 
+        <section id="projetos" class="projects">
+            <h2 class="projects-title">Projetos</h2>
 
-    <section id="projetos" class="projects">
-        <h2 class="projects-title">Projetos</h2>
+            <div class="project-card">
+                <img
+                    src="./img/aguias_dashboard.jpeg"
+                    alt="Projeto Águias do Sul"
+                    width="1000"
+                    height="625"
+                    loading="lazy"
+                    decoding="async"
+                />
 
-        <div class="project-card">
-            <img src="./img/aguias_dashboard.jpeg" alt="Projeto Águias do Sul" width="1000" height="625" loading="lazy" decoding="async">
-        
-            <div class="project-overlay">
-                <h3>Projeto Águias do Sul</h3>
-        
-                <p>
-                    Sistema web para gerenciamento de clubes de Desbravadores,
-com controle de membros, unidades, eventos e pontuações.
-                </p>
-        
-                <div class="techs">
-                    <img src="./img/docker_icon.png" alt="">
-                    <img src="./img/laravel_icon.png" alt="">
-                    <img src="./img/postgresql_icon.png" alt="">
-                    <img src="./img/livewire_icon.png" alt="">
-                    <img src="./img/nginx_icon.png" alt="">
+                <div class="project-overlay">
+                    <h3>Projeto Águias do Sul</h3>
 
-                </div>
-        
-                <div class="buttons">
-                    <a href="https://github.com/MatheusRieperdeOliveira/aguias_do_sul" target="_blank">GitHub
-                        <img src="./img/github_icon.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
+                    <p>
+                        Sistema web para gerenciamento de clubes de
+                        Desbravadores, com controle de membros, unidades,
+                        eventos e pontuações.
+                    </p>
 
-        <div class="project-card">
-            <img src="./img/rieperfind_screenshot.jpg" alt="Projeto rieperfind" width="1000" height="625" loading="lazy" decoding="async">
+                    <div class="techs">
+                        <img src="./img/docker_icon.png" alt="" />
+                        <img src="./img/laravel_icon.png" alt="" />
+                        <img src="./img/postgresql_icon.png" alt="" />
+                        <img src="./img/livewire_icon.png" alt="" />
+                        <img src="./img/nginx_icon.png" alt="" />
+                    </div>
 
-            <div class="project-overlay">
-                <h3>rieperfind</h3>
-
-                <p>
-                    Console web no estilo terminal que consulta perfis do GitHub
-e monta um whois do usuário, com tema claro/escuro e exportação em imagem.
-                </p>
-
-                <div class="techs">
-                    <img src="./img/react_icon.svg" alt="">
-                    <img src="./img/typescript_icon.svg" alt="">
-                    <img src="./img/vitejs_icon.svg" alt="">
-                    <img src="./img/docker_icon.png" alt="">
-                    <img src="./img/nginx_icon.png" alt="">
-                </div>
-
-                <div class="buttons">
-                    <a href="https://github.com/MatheusRieperdeOliveira/rieperfind" target="_blank">GitHub
-                        <img src="./img/github_icon.png" alt="">
-                    </a>
-
-                    <a href="https://scan.rieper.tech" target="_blank">Acessar
-                        <i data-lucide="external-link"></i>
-                    </a>
+                    <div class="buttons">
+                        <a
+                            href="https://github.com/MatheusRieperdeOliveira/aguias_do_sul"
+                            target="_blank"
+                            >GitHub
+                            <img src="./img/github_icon.png" alt="" />
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <img src="./img/riephub_cover.jpg" alt="Projeto riephub" width="1000" height="625" loading="lazy" decoding="async">
+            <div class="project-card">
+                <img
+                    src="./img/rieperfind_screenshot.jpg"
+                    alt="Projeto rieperfind"
+                    width="1000"
+                    height="625"
+                    loading="lazy"
+                    decoding="async"
+                />
 
-            <div class="project-overlay">
-                <h3>riephub</h3>
+                <div class="project-overlay">
+                    <h3>rieperfind</h3>
 
-                <p>
-                    Plataforma para gerenciar instâncias WhatsApp: autenticação JWT,
-envio de mensagens, webhooks e painel admin em Vue.
-                </p>
+                    <p>
+                        Console web no estilo terminal que consulta perfis do
+                        GitHub e monta um whois do usuário, com tema
+                        claro/escuro e exportação em imagem.
+                    </p>
 
-                <div class="techs">
-                    <img src="./img/go_icon.svg" alt="">
-                    <img src="./img/vuejs_icon.svg" alt="">
-                    <img src="./img/typescript_icon.svg" alt="">
-                    <img src="./img/postgresql_icon.png" alt="">
-                    <img src="./img/docker_icon.png" alt="">
-                </div>
+                    <div class="techs">
+                        <img src="./img/react_icon.svg" alt="" />
+                        <img src="./img/typescript_icon.svg" alt="" />
+                        <img src="./img/vitejs_icon.svg" alt="" />
+                        <img src="./img/docker_icon.png" alt="" />
+                        <img src="./img/nginx_icon.png" alt="" />
+                    </div>
 
-                <div class="buttons">
-                    <a href="https://github.com/MatheusRieperdeOliveira/mathz_go" target="_blank">GitHub
-                        <img src="./img/github_icon.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
+                    <div class="buttons">
+                        <a
+                            href="https://github.com/MatheusRieperdeOliveira/rieperfind"
+                            target="_blank"
+                            >GitHub
+                            <img src="./img/github_icon.png" alt="" />
+                        </a>
 
-        <div class="project-card">
-            <img src="./img/book_wise_cover.jpg" alt="Projeto Book Wise" width="1000" height="625" loading="lazy" decoding="async">
-
-            <div class="project-overlay">
-                <h3>Book Wise</h3>
-
-                <p>
-                    Sistema em PHP para cadastro, edição, busca e avaliação de livros,
-com autenticação e PostgreSQL.
-                </p>
-
-                <div class="techs">
-                    <img src="./img/php_icon.svg" alt="">
-                    <img src="./img/postgresql_icon.png" alt="">
-                    <img src="./img/docker_icon.png" alt="">
-                </div>
-
-                <div class="buttons">
-                    <a href="https://github.com/MatheusRieperdeOliveira/book_wise" target="_blank">GitHub
-                        <img src="./img/github_icon.png" alt="">
-                    </a>
+                        <a href="https://scan.rieper.tech" target="_blank"
+                            >Acessar
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <img src="./img/star_wars_api_cover.jpg" alt="Projeto Star Wars API" width="1000" height="625" loading="lazy" decoding="async">
+            <div class="project-card">
+                <img
+                    src="./img/listuservuejs.png"
+                    alt="Projeto List Users With Vue.js"
+                    width="1000"
+                    height="625"
+                    loading="lazy"
+                    decoding="async"
+                />
 
-            <div class="project-overlay">
-                <h3>Star Wars API</h3>
+                <div class="project-overlay">
+                    <h3>Projeto Listar Usuário</h3>
 
-                <p>
-                    API REST de Star Wars em Go puro (net/http), com personagens,
-planetas, naves e filmes, dockerizada com PostgreSQL.
-                </p>
+                    <p>
+                        A aplicação consiste em um painel de listagem que
+                        consome uma api externa de usuários fictícios. O
+                        objetivo principal foi praticar a criação de componentes
+                        reutilizáveis, gerenciamento de estado reativo, layout
+                        responsivo em grid e boas práticas de tipografia e
+                        espaçamento ultilizando o vue.js.
+                    </p>
 
-                <div class="techs">
-                    <img src="./img/go_icon.svg" alt="">
-                    <img src="./img/postgresql_icon.png" alt="">
-                    <img src="./img/docker_icon.png" alt="">
-                </div>
+                    <div class="techs">
+                        <img src="./img/vuejs_icon.svg" alt="" />
+                        <img src="./img/typescript_icon.svg" alt="" />
+                        <img src="./img/docker_icon.png" alt="" />
+                    </div>
 
-                <div class="buttons">
-                    <a href="https://github.com/MatheusRieperdeOliveira/star_wars_api" target="_blank">GitHub
-                        <img src="./img/github_icon.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <img src="./img/airport_cover.jpg" alt="Projeto Airport Manager" width="1000" height="625" loading="lazy" decoding="async">
-
-            <div class="project-overlay">
-                <h3>Airport Manager</h3>
-
-                <p>
-                    Jogo web de gerenciamento de aeroporto em Vue 3, com pista,
-aviões e interface em Vuetify.
-                </p>
-
-                <div class="techs">
-                    <img src="./img/vuejs_icon.svg" alt="">
-                    <img src="./img/typescript_icon.svg" alt="">
-                    <img src="./img/vitejs_icon.svg" alt="">
-                    <img src="./img/docker_icon.png" alt="">
-                </div>
-
-                <div class="buttons">
-                    <a href="https://github.com/MatheusRieperdeOliveira/airport-manager-game" target="_blank">GitHub
-                        <img src="./img/github_icon.png" alt="">
-                    </a>
+                    <div class="buttons">
+                        <a
+                            href="https://github.com/MatheusRieperdeOliveira/ListUsersWithVue.js"
+                            target="_blank"
+                            >GitHub
+                            <img src="./img/github_icon.png" alt="" />
+                        </a>
+                        <a href="https://list.user.rieper.tech" target="_blank"
+                            >Acessar
+                            <i data-lucide="external-link"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <img src="./img/gosheetsgo_cover.jpg" alt="Projeto GoSheetsGo" width="1000" height="625" loading="lazy" decoding="async">
+            <div class="project-card">
+                <img
+                    src="./img/riephub_cover.jpg"
+                    alt="Projeto riephub"
+                    width="1000"
+                    height="625"
+                    loading="lazy"
+                    decoding="async"
+                />
 
-            <div class="project-overlay">
-                <h3>GoSheetsGo</h3>
+                <div class="project-overlay">
+                    <h3>riephub</h3>
 
-                <p>
-                    App desktop em Go (Fyne) para registrar horas extras
-e enviar direto para o Google Sheets.
-                </p>
+                    <p>
+                        Plataforma para gerenciar instâncias WhatsApp:
+                        autenticação JWT, envio de mensagens, webhooks e painel
+                        admin em Vue.
+                    </p>
 
-                <div class="techs">
-                    <img src="./img/go_icon.svg" alt="">
-                    <img src="./img/docker_icon.png" alt="">
-                </div>
+                    <div class="techs">
+                        <img src="./img/go_icon.svg" alt="" />
+                        <img src="./img/vuejs_icon.svg" alt="" />
+                        <img src="./img/typescript_icon.svg" alt="" />
+                        <img src="./img/postgresql_icon.png" alt="" />
+                        <img src="./img/docker_icon.png" alt="" />
+                    </div>
 
-                <div class="buttons">
-                    <a href="https://github.com/MatheusRieperdeOliveira/GoSheetsGo" target="_blank">GitHub
-                        <img src="./img/github_icon.png" alt="">
-                    </a>
+                    <div class="buttons">
+                        <a
+                            href="https://github.com/MatheusRieperdeOliveira/mathz_go"
+                            target="_blank"
+                            >GitHub
+                            <img src="./img/github_icon.png" alt="" />
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <script src="./script.js" defer></script>
-</body>
+            <div class="project-card">
+                <img
+                    src="./img/book_wise_cover.jpg"
+                    alt="Projeto Book Wise"
+                    width="1000"
+                    height="625"
+                    loading="lazy"
+                    decoding="async"
+                />
+
+                <div class="project-overlay">
+                    <h3>Book Wise</h3>
+
+                    <p>
+                        Sistema em PHP para cadastro, edição, busca e avaliação
+                        de livros, com autenticação e PostgreSQL.
+                    </p>
+
+                    <div class="techs">
+                        <img src="./img/php_icon.svg" alt="" />
+                        <img src="./img/postgresql_icon.png" alt="" />
+                        <img src="./img/docker_icon.png" alt="" />
+                    </div>
+
+                    <div class="buttons">
+                        <a
+                            href="https://github.com/MatheusRieperdeOliveira/book_wise"
+                            target="_blank"
+                            >GitHub
+                            <img src="./img/github_icon.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img
+                    src="./img/star_wars_api_cover.jpg"
+                    alt="Projeto Star Wars API"
+                    width="1000"
+                    height="625"
+                    loading="lazy"
+                    decoding="async"
+                />
+
+                <div class="project-overlay">
+                    <h3>Star Wars API</h3>
+
+                    <p>
+                        API REST de Star Wars em Go puro (net/http), com
+                        personagens, planetas, naves e filmes, dockerizada com
+                        PostgreSQL.
+                    </p>
+
+                    <div class="techs">
+                        <img src="./img/go_icon.svg" alt="" />
+                        <img src="./img/postgresql_icon.png" alt="" />
+                        <img src="./img/docker_icon.png" alt="" />
+                    </div>
+
+                    <div class="buttons">
+                        <a
+                            href="https://github.com/MatheusRieperdeOliveira/star_wars_api"
+                            target="_blank"
+                            >GitHub
+                            <img src="./img/github_icon.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img
+                    src="./img/airport_cover.jpg"
+                    alt="Projeto Airport Manager"
+                    width="1000"
+                    height="625"
+                    loading="lazy"
+                    decoding="async"
+                />
+
+                <div class="project-overlay">
+                    <h3>Airport Manager</h3>
+
+                    <p>
+                        Jogo web de gerenciamento de aeroporto em Vue 3, com
+                        pista, aviões e interface em Vuetify.
+                    </p>
+
+                    <div class="techs">
+                        <img src="./img/vuejs_icon.svg" alt="" />
+                        <img src="./img/typescript_icon.svg" alt="" />
+                        <img src="./img/vitejs_icon.svg" alt="" />
+                        <img src="./img/docker_icon.png" alt="" />
+                    </div>
+
+                    <div class="buttons">
+                        <a
+                            href="https://github.com/MatheusRieperdeOliveira/airport-manager-game"
+                            target="_blank"
+                            >GitHub
+                            <img src="./img/github_icon.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img
+                    src="./img/gosheetsgo_cover.jpg"
+                    alt="Projeto GoSheetsGo"
+                    width="1000"
+                    height="625"
+                    loading="lazy"
+                    decoding="async"
+                />
+
+                <div class="project-overlay">
+                    <h3>GoSheetsGo</h3>
+
+                    <p>
+                        App desktop em Go (Fyne) para registrar horas extras e
+                        enviar direto para o Google Sheets.
+                    </p>
+
+                    <div class="techs">
+                        <img src="./img/go_icon.svg" alt="" />
+                        <img src="./img/docker_icon.png" alt="" />
+                    </div>
+
+                    <div class="buttons">
+                        <a
+                            href="https://github.com/MatheusRieperdeOliveira/GoSheetsGo"
+                            target="_blank"
+                            >GitHub
+                            <img src="./img/github_icon.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h2>Contato<span>.</span></h2>
+
+                    <p>
+                        Tem um projeto em mente, uma oportunidade ou só quer
+                        trocar uma ideia sobre tecnologia? Me manda uma
+                        mensagem!
+                    </p>
+                </div>
+
+                <div>
+                    <form
+                        id="contact-form"
+                        class="contact-form"
+                        onsubmit="contact()"
+                    >
+                        <div class="contact-grid">
+                            <div class="form-group">
+                                <label for="contact-name">
+                                    <span>01.</span> Seu nome
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contact-name"
+                                    name="name"
+                                    placeholder="Como posso te chamar?"
+                                    autocomplete="name"
+                                    maxlength="100"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-email">
+                                    <span>02.</span> Seu e-mail
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="contact-email"
+                                    name="email"
+                                    placeholder="voce@exemplo.com"
+                                    autocomplete="email"
+                                    maxlength="254"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">
+                                <span>03.</span> Assunto
+                            </label>
+
+                            <select
+                                id="contact-subject"
+                                name="subject"
+                                required
+                            >
+                                <option value="" disabled selected>
+                                    Selecione um assunto
+                                </option>
+                                <option value="Oportunidade profissional">
+                                    Oportunidade profissional
+                                </option>
+                                <option value="Projeto freelance">
+                                    Projeto freelance
+                                </option>
+                                <option value="Desenvolvimento de software">
+                                    Desenvolvimento de software
+                                </option>
+                                <option value="Outro assunto">
+                                    Outro assunto
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">
+                                <span>04.</span> Mensagem
+                            </label>
+
+                            <textarea
+                                id="contact-message"
+                                name="message"
+                                placeholder="Escreva sua mensagem aqui..."
+                                rows="6"
+                                maxlength="5000"
+                                required
+                            ></textarea>
+
+                            <div class="message-footer">
+                                <span id="message-counter">0 / 5000</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-submit">
+
+                            <button type="submit" class="contact-button">
+                                <span class="button-text">Enviar mensagem</span>
+                                <i data-lucide="send"></i>
+                            </button>
+                        </div>
+
+                        <p
+                            id="contact-feedback"
+                            class="contact-feedback"
+                            role="status"
+                            aria-live="polite"
+                            hidden
+                        ></p>
+                    </form>
+                </div>
+
+                <div class="contact-footer">
+                    <span>© 2026 matheus.dev</span>
+                </div>
+            </div>
+        </section>
+
+        <script src="./script.js" defer></script>
+    </body>
 </html>
